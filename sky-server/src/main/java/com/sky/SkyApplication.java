@@ -19,6 +19,7 @@ public class SkyApplication {
  * 1.全局异常
  * 2.拦截器
  *      将用户信息存储在ThreadLocal中
+ *      扩展Spring MVC框架消息转换器
  * 3.登录时 token生成
  * 4.swagger
  * */
