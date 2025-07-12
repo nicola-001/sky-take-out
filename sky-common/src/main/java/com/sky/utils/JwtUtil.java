@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.Map;
@@ -18,6 +19,7 @@ public class JwtUtil {
      * @param claims    设置的信息
      * @return
      */
+    //生成JWT
     public static String createJWT(String secretKey, long ttlMillis, Map<String, Object> claims) {
         // 指定签名的时候使用的签名算法，也就是header那部分
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
@@ -45,6 +47,7 @@ public class JwtUtil {
      * @param token     加密后的token
      * @return
      */
+    //Token解密
     public static Claims parseJWT(String secretKey, String token) {
         // 得到DefaultJwtParser
         Claims claims = Jwts.parser()
