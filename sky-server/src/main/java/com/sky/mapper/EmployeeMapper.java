@@ -13,6 +13,9 @@ public interface EmployeeMapper extends BaseMapper<Employee> {
     //分页查询
     Page<Employee> page(EmployeePageQueryDTO employeePageQueryDTO);
 
+    //更新操作
+    void update(Employee employee);
+
     /**
      * 根据用户名查询员工
      * @param username

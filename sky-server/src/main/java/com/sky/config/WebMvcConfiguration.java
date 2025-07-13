@@ -93,6 +93,16 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         //将上面的消息转换器对象追加到mvc框架的转换器集合中,索引为0 优先使用自己的消息转换器
         converters.add(0, messageConverter);
         log.info("消息转换器添加成功");
-
     }
+    /*
+    * 消息转换器：
+    *   用户转变时间的格式
+    *   转变时间的格式：
+    *   1.使用@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    *   2.使用extendMessageConverters消息转换器
+    *       2.1 创建消息转换器对象
+    *       2.2 设置消息转换器对象
+    *       2.3 将消息转换器对象追加到mvc框架的转换器集合中
+    *
+    * */
 }
