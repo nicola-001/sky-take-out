@@ -1,6 +1,7 @@
 package com.sky.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,7 +25,12 @@ public class Employee implements Serializable {
 
     private String name;
 
-    @TableField(select = false)
+    /*
+    * @TableField(exist = false)
+    * 表示该字段不存在
+    * */
+    //查询出来：但是不向前端展示
+    @JsonIgnore
     private String password;
 
     private String phone;

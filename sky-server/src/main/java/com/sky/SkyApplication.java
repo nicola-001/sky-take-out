@@ -14,7 +14,6 @@ public class SkyApplication {
         log.info("server started");
     }
 }
-
 /*
  * 1.全局异常
  * 2.拦截器
@@ -22,4 +21,9 @@ public class SkyApplication {
  *      扩展Spring MVC框架消息转换器
  * 3.登录时 token生成
  * 4.swagger
+ *
+ *
+ * 注：
+ *  @JsonIgnore：查询出来：但是不向前端展示
+ * @TableField：不查询该字段
  * */
