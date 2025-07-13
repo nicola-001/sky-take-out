@@ -21,8 +21,8 @@ public class SkyApplication {
  *      扩展Spring MVC框架消息转换器
  * 3.登录时 token生成
  * 4.swagger
- *
- *
+ * 5.自定义注解(自定义填充公共字段) ：@ControllerAdvice + @ExceptionHandler
+ *  用到的技术点： AOP 反射 注解 切面
  * 注：
  *  @JsonIgnore：查询出来：但是不向前端展示
  * @TableField：不查询该字段
